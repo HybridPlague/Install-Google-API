@@ -64,7 +64,6 @@ cd Play*
 sudo python siriServer.py -p 444
 cd ..
 cd ..
-cd ..
 sudo ./menu.sh
 fi
 if [ $CHOICE -eq 5 ]
