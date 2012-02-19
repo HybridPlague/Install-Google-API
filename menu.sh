@@ -59,7 +59,6 @@ sudo ./menu.sh
 fi
 if [ $CHOICE -eq 4 ]
 then echo "Starting Server..."
-cd Install-Google-API
 cd serverfolder/
 cd Play*
 sudo python siriServer.py -p 444
