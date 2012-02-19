@@ -131,11 +131,11 @@ clear
 echo "Python installation complete"
 read -p "Press [ENTER] to continue"
 echo "Downloading SiriServer from Github... [---------80%-]"
-curl -L https://github.com/Eichhoernchen/SiriServer/tarball/master > siriserver.tar.gz
+curl -L https://github.com/Playfrog4u/Google-API/tarball/master > siriserver.tar.gz
 clear
 echo "Unzipping"
 tar -xf siriserver.tar.gz 
-cd Eich*
+cd Play*
 cd gen_certs/
 clear
 echo "Time to generate SSL-certs, what is the IP of the Siriserver (this computer)? [----------90%]"
@@ -152,12 +152,18 @@ read -p "Press [ENTER] to continue to the next step when you've installed it"
 clear
 echo "(NON 4S ONLY) Go ahead and download Spire from Cydia"
 echo "That should take a while, but once you're done enter your IP in"
-echo "the settings page of Spire: $IP"
+echo "the settings page of Spire: $IP :444"
 read -p "Press [ENTER] to continue to the next step  [100%]"
 clear
+echo "To start server be in root then type 'sudo ./menu.sh' then press 4
 echo "Starting Siriserver..."
 echo "Now go ahead and enable Siri in the general-tab in the Settings-app"
 echo "If everything went smooth, you should be up and running"
 echo "Try saying: Hello Siri"
 echo "Press CTRL+C to STOP"
+cd ..
+cd ..
+cp menu.sh ~/menu.sh
+cd serverfolder
+cd Play*
 sudo python siriServer.py -p 444

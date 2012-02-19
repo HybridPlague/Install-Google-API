@@ -47,9 +47,9 @@ fi
 if [ $CHOICE -eq 2 ]
 then echo Updating...
 clear
-cd InstallSiriServer
+cd Install-Google-API
 cd serverfolder
-cd Eich*
+cd Play*
 sudo sh ./updateServer.sh
 echo "Update complete, all files are up to date!"
 read -p "Press [ENTER] to continue"
@@ -59,9 +59,9 @@ sudo ./menu.sh
 fi
 if [ $CHOICE -eq 4 ]
 then echo "Starting Server..."
-cd InstallSiriServer
+cd Install-Google-API
 cd serverfolder/
-cd Eich*
+cd Play*
 sudo python siriServer.py -p 444
 cd ..
 cd ..
@@ -70,9 +70,9 @@ sudo ./menu.sh
 fi
 if [ $CHOICE -eq 5 ]
 then echo "Editing Siri command base list!"
-cd InstallSiriServer
+cd Install-Google-API
 cd serverfolder/
-cd Eich*
+cd Play*
 cd plugins/
 nano smalltalk.py
 cd ..
@@ -85,9 +85,9 @@ if [ $CHOICE -eq 6 ]
 then echo "Goodbye!" && exit
 fi
 if [ $CHOICE -eq 3 ]
-then cd InstallSiriServer
+then cd Install-Google-API
 cd serverfolder/
-cd Eich*
+cd Play*
 cd gen_certs
 echo "Enter the IP of the Siriserver "
 read SIP
