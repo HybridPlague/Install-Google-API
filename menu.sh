@@ -1,5 +1,8 @@
 #!/bin/bash
-# Menu script for the Google's API 2 TEXT
+
+# Menu script for the InstallSiriServer
+# By johanberglind, it uses the update.sh script for updating from the
+# Eichhoernchens Siriserver project
 
 clear
 tput setaf 2
@@ -10,7 +13,7 @@ fi
 tput sgr0
 tput cup 3 15
 tput setaf 3
-echo "Google's API Speech 2 TEXT"
+echo "InstallSiriServer controlpanel v1.0"
 tput sgr0
 tput cup 5 15
 tput setaf 1
@@ -30,11 +33,7 @@ echo "4. Start SiriServer"
 tput sgr0
 tput cup 9 15
 tput setaf 1
-echo "5. Add more commands to Siri"
-tput sgr0
-tput cup 10 15
-tput setaf 1
-echo "6. Exit"
+echo "5. Exit"
 tput sgr0
 tput cup 11 15
 tput setaf 1
@@ -47,9 +46,8 @@ fi
 if [ $CHOICE -eq 2 ]
 then echo Updating...
 clear
-cd Install-Google-API
 cd serverfolder
-cd Play*
+cd Eich*
 sudo sh ./updateServer.sh
 echo "Update complete, all files are up to date!"
 read -p "Press [ENTER] to continue"
@@ -60,32 +58,18 @@ fi
 if [ $CHOICE -eq 4 ]
 then echo "Starting Server..."
 cd serverfolder/
-cd Play*
-sudo python siriServer.py -p 444
+cd Eich*
+sudo python siriServer.py
 cd ..
 cd ..
 sudo ./menu.sh
 fi
 if [ $CHOICE -eq 5 ]
-then echo "Editing Siri command base list!"
-cd Install-Google-API
-cd serverfolder/
-cd Play*
-cd plugins/
-nano smalltalk.py
-cd ..
-cd ..
-cd ..
-cd ..
-sudo ./menu.sh
-fi
-if [ $CHOICE -eq 6 ]
 then echo "Goodbye!" && exit
 fi
 if [ $CHOICE -eq 3 ]
-then cd Install-Google-API
-cd serverfolder/
-cd Play*
+then cd serverfolder/
+cd Eich*
 cd gen_certs
 echo "Enter the IP of the Siriserver "
 read SIP
