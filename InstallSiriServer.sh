@@ -124,6 +124,7 @@ clear
 fi
 clear
 echo "Installing Python-packages [------70%--]"
+sudo apt-get install python-m2crypto
 sudo easy_install biplist
 sudo easy_install M2Crypto
 clear
@@ -151,7 +152,7 @@ read -p "Press [ENTER] to continue to the next step when you've installed it"
 clear
 echo "(NON 4S ONLY) Go ahead and download Spire from Cydia"
 echo "That should take a while, but once you're done enter your IP in"
-echo "the settings page of Spire: $IP"
+echo "the settings page of Spire: $IP :444"
 read -p "Press [ENTER] to continue to the next step  [100%]"
 clear
 echo "Starting Siriserver..."

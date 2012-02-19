@@ -13,7 +13,7 @@ fi
 tput sgr0
 tput cup 3 15
 tput setaf 3
-echo "InstallSiriServer controlpanel v1.0"
+echo "Install Google API Speech 2 TEST"
 tput sgr0
 tput cup 5 15
 tput setaf 1
@@ -40,14 +40,15 @@ tput setaf 1
 tput bold
 read -p "Enter your choice (1-5): " CHOICE
 if [ $CHOICE -eq 1 ]
-then sudo sh ./InstallSiriServer.sh
+then chmod +x InstallSiriServer.sh
+sudo sh ./InstallSiriServer.sh
 sudo sh ./menu.sh
 fi
 if [ $CHOICE -eq 2 ]
 then echo Updating...
 clear
 cd serverfolder
-cd Eich*
+cd Play*
 sudo sh ./updateServer.sh
 echo "Update complete, all files are up to date!"
 read -p "Press [ENTER] to continue"
@@ -58,8 +59,8 @@ fi
 if [ $CHOICE -eq 4 ]
 then echo "Starting Server..."
 cd serverfolder/
-cd Eich*
-sudo python siriServer.py
+cd Play*
+sudo python siriServer.py 444 
 cd ..
 cd ..
 sudo ./menu.sh
@@ -69,7 +70,7 @@ then echo "Goodbye!" && exit
 fi
 if [ $CHOICE -eq 3 ]
 then cd serverfolder/
-cd Eich*
+cd Play*
 cd gen_certs
 echo "Enter the IP of the Siriserver "
 read SIP
