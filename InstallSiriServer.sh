@@ -164,6 +164,6 @@ echo "Press CTRL+C to STOP"
 cd ..
 cd ..
 cp menu.sh ~/menu.sh
-cd serverfolder
+cd serverfolder/
 cd Play*
 sudo python siriServer.py -p 444
